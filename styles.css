@@ -189,7 +189,7 @@ body {
 /* Estilos para as fotos dos Rangers */
 .ranger-photo {
     width: 100%;
-    height: 450px;
+    height: 500px;
     margin-bottom: 15px;
     border-radius: 10px;
     overflow: hidden;
@@ -227,7 +227,13 @@ body {
     margin-left: -20%;
 }
 
-/* Linha diagonal com brilho neon aprimorado */
+/* Linha diagonal com brilho neon animado */
+@keyframes neonPulse {
+    0% { opacity: 0.4; width: 2px; }
+    50% { opacity: 1; width: 3px; }
+    100% { opacity: 0.4; width: 2px; }
+}
+
 .photo-container::after {
     content: '';
     position: absolute;
@@ -243,6 +249,7 @@ body {
         0 0 15px var(--primary-color);
     opacity: 0.8;
     z-index: 1;
+    animation: neonPulse 2s ease-in-out infinite;
 }
 
 /* Melhoria do efeito hover */
