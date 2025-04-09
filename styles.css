@@ -220,22 +220,40 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Remove as bordas laterais e adiciona a linha diagonal */
 .photo-civilian {
-    border-right: 2px solid var(--primary-color);
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
 }
 
 .photo-morphed {
-    border-left: 2px solid var(--primary-color);
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: -15%;
 }
 
 .photo-top {
     border-bottom: 2px solid var(--primary-color);
+    transform-origin: center;
+    transform: rotate(-5deg) translateY(-5px);
 }
 
 /* Efeito hover nas fotos */
 .ranger-card:hover .photo-top,
 .ranger-card:hover .photo-bottom {
     transform: scale(1.1);
+}
+
+/* Adiciona brilho neon na linha diagonal */
+.photo-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 42%;
+    width: 4px;
+    height: 120%;
+    background: var(--primary-color);
+    transform: rotate(15deg);
+    box-shadow: 0 0 15px var(--primary-color);
+    opacity: 0.7;
 }
 
 /* Placeholder para imagens dos Rangers */
@@ -258,12 +276,6 @@ body {
 /* Adiciona brilho neon nas bordas das fotos */
 [data-era="spd"] .ranger-photo {
     box-shadow: 0 0 15px rgba(0, 168, 255, 0.3);
-}
-
-[data-era="spd"] .photo-civilian,
-[data-era="spd"] .photo-morphed,
-[data-era="spd"] .photo-top {
-    border-color: rgba(0, 168, 255, 0.5);
 }
 
 /* Cores específicas para cada Ranger */
