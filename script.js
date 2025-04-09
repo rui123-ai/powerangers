@@ -1,23 +1,66 @@
-// Dados dos Rangers (exemplo)
+// Dados dos Rangers
 const rangersData = {
-    mightyMorphin: [
+    spd: [
         {
-            name: "Jason Lee Scott",
+            name: "Daniel Delon",
             color: "red",
-            age: 17,
-            ability: "Liderança Tática",
-            zord: "Tyrannosaurus Dinozord",
-            curiosity: "Pratica artes marciais desde os 12 anos"
+            age: 23,
+            ability: "Liderança e Estratégia",
+            zord: "SPD Runner 1",
+            curiosity: "Graduado com honras na Academia SPD",
+            civilian_photo: "path/to/daniel-civilian.jpg",
+            morphed_photo: "path/to/daniel-morphed.jpg"
         },
         {
-            name: "Kimberly Hart",
+            name: "Klaus Drakkonov",
+            color: "blue",
+            age: 25,
+            ability: "Análise Tática e Combate",
+            zord: "SPD Runner 2",
+            curiosity: "Especialista em tecnologia alienígena",
+            civilian_photo: "path/to/klaus-civilian.jpg",
+            morphed_photo: "path/to/klaus-morphed.jpg"
+        },
+        {
+            name: "Amemiya Taiyou",
+            color: "green",
+            age: 22,
+            ability: "Agilidade e Artes Marciais",
+            zord: "SPD Runner 3",
+            curiosity: "Campeão de artes marciais intergalácticas",
+            civilian_photo: "path/to/amemiya-civilian.jpg",
+            morphed_photo: "path/to/amemiya-morphed.jpg"
+        },
+        {
+            name: "Jackie Harllow",
+            color: "yellow",
+            age: 24,
+            ability: "Investigação e Rastreamento",
+            zord: "SPD Runner 4",
+            curiosity: "Ex-detetive da polícia espacial",
+            civilian_photo: "path/to/jackie-civilian.jpg",
+            morphed_photo: "path/to/jackie-morphed.jpg"
+        },
+        {
+            name: "Ahri-Anya Lang",
             color: "pink",
-            age: 16,
-            ability: "Acrobacia e precisão com arco",
-            zord: "Pterodactyl Dinozord",
-            curiosity: "Ex-ginasta olímpica"
+            age: 21,
+            ability: "Tecnologia e Hacking",
+            zord: "SPD Runner 5",
+            curiosity: "Prodígio em programação quântica",
+            civilian_photo: "path/to/ahri-civilian.jpg",
+            morphed_photo: "path/to/ahri-morphed.jpg"
+        },
+        {
+            name: "Anaya Hazel Adebayo",
+            color: "gold",
+            age: 26,
+            ability: "Comando e Operações Especiais",
+            zord: "SPD Gold Runner",
+            curiosity: "Líder da divisão de operações especiais",
+            civilian_photo: "path/to/anaya-civilian.jpg",
+            morphed_photo: "path/to/anaya-morphed.jpg"
         }
-        // Adicione mais Rangers aqui
     ]
 };
 
@@ -26,6 +69,12 @@ function createRangerCard(ranger) {
     return `
         <div class="ranger-card">
             <div class="card-header">
+                <div class="ranger-photo">
+                    <div class="photo-split">
+                        <div class="photo-civilian" style="background-image: url('${ranger.civilian_photo}')"></div>
+                        <div class="photo-morphed" style="background-image: url('${ranger.morphed_photo}')"></div>
+                    </div>
+                </div>
                 <h4>${ranger.name}</h4>
                 <span class="ranger-color ${ranger.color}">Ranger ${ranger.color}</span>
             </div>

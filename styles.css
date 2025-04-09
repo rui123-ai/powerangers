@@ -186,31 +186,92 @@ body {
     backdrop-filter: blur(5px);
 }
 
-.ranger-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--neon-glow);
-}
-
-.card-header {
+/* Estilos para as fotos dos Rangers */
+.ranger-photo {
+    width: 100%;
+    height: 300px;
     margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid rgba(0, 168, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
-.ranger-color {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    margin-top: 5px;
+.photo-split {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
 }
 
-.ranger-color.red { background: rgba(255, 0, 0, 0.2); color: #ff4444; }
-.ranger-color.pink { background: rgba(255, 192, 203, 0.2); color: #ff69b4; }
-.ranger-color.blue { background: rgba(0, 0, 255, 0.2); color: #4444ff; }
-.ranger-color.yellow { background: rgba(255, 255, 0, 0.2); color: #ffff44; }
-.ranger-color.black { background: rgba(0, 0, 0, 0.2); color: #ffffff; }
-.ranger-color.green { background: rgba(0, 255, 0, 0.2); color: #44ff44; }
+.photo-civilian,
+.photo-morphed {
+    width: 50%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.3s ease;
+}
+
+.photo-civilian {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+}
+
+.photo-morphed {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    margin-left: -15%;
+}
+
+.ranger-card:hover .photo-civilian {
+    transform: scale(1.1);
+}
+
+.ranger-card:hover .photo-morphed {
+    transform: scale(1.1);
+}
+
+/* Cores específicas para cada Ranger */
+.ranger-color.red { 
+    background: rgba(255, 0, 0, 0.2); 
+    color: #ff4444; 
+}
+.ranger-color.blue { 
+    background: rgba(0, 0, 255, 0.2); 
+    color: #4444ff; 
+}
+.ranger-color.green { 
+    background: rgba(0, 255, 0, 0.2); 
+    color: #44ff44; 
+}
+.ranger-color.yellow { 
+    background: rgba(255, 255, 0, 0.2); 
+    color: #ffff44; 
+}
+.ranger-color.pink { 
+    background: rgba(255, 192, 203, 0.2); 
+    color: #ff69b4; 
+}
+.ranger-color.gold { 
+    background: rgba(255, 215, 0, 0.2); 
+    color: #ffd700; 
+}
+
+/* Estilos específicos para SPD Rangers */
+[data-era="spd"] .ranger-card {
+    background: linear-gradient(135deg, var(--card-bg), rgba(0, 0, 40, 0.9));
+}
+
+[data-era="spd"] .ranger-photo {
+    box-shadow: 0 0 20px rgba(0, 168, 255, 0.2);
+}
+
+/* Placeholder para imagens dos Rangers */
+[data-era="spd"] .photo-civilian {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+[data-era="spd"] .photo-morphed {
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
 /* Seção Cosmic Nexus */
 .nexus-features {
