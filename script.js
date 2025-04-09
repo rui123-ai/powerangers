@@ -55,6 +55,19 @@ function filterRangers(searchTerm, era) {
     });
 }
 
+// Efeito de parallax para as estrelas
+function handleParallax() {
+    const stars = document.querySelector('.stars');
+    const twinkling = document.querySelector('.twinkling');
+    let scrolled = window.pageYOffset;
+    
+    // Usando requestAnimationFrame para melhor performance
+    requestAnimationFrame(() => {
+        stars.style.transform = `translateY(${scrolled * 0.2}px)`;
+        twinkling.style.transform = `translateY(${scrolled * 0.1}px)`;
+    });
+}
+
 // Event Listeners
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll para links de navegação
@@ -92,12 +105,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Efeito de parallax no fundo
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        document.querySelector('.stars').style.transform = `translateY(${scrolled * 0.5}px)`;
-        document.querySelector('.twinkling').style.transform = `translateY(${scrolled * 0.3}px)`;
-    });
+    // Adiciona o evento de scroll para o efeito parallax
+    window.addEventListener('scroll', handleParallax, { passive: true });
 
     // Animação de entrada para cards
     const observer = new IntersectionObserver((entries) => {
