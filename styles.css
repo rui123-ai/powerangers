@@ -209,12 +209,6 @@ body {
     height: 100%;
     position: relative;
     overflow: hidden;
-}
-
-.photo-top,
-.photo-bottom {
-    width: 100%;
-    height: 50%;
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease;
@@ -230,15 +224,9 @@ body {
     margin-left: -15%;
 }
 
-.photo-top {
-    border-bottom: 2px solid var(--primary-color);
-    transform-origin: center;
-    transform: rotate(-5deg) translateY(-5px);
-}
-
 /* Efeito hover nas fotos */
-.ranger-card:hover .photo-top,
-.ranger-card:hover .photo-bottom {
+.ranger-card:hover .photo-civilian,
+.ranger-card:hover .photo-morphed {
     transform: scale(1.1);
 }
 
@@ -246,9 +234,9 @@ body {
 .photo-container::after {
     content: '';
     position: absolute;
-    top: 0;
+    top: -10%;
     left: 42%;
-    width: 4px;
+    width: 3px;
     height: 120%;
     background: var(--primary-color);
     transform: rotate(15deg);
@@ -257,20 +245,12 @@ body {
 }
 
 /* Placeholder para imagens dos Rangers */
-[data-era="spd"] .photo-civilian .photo-top {
+[data-era="spd"] .photo-civilian {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-[data-era="spd"] .photo-civilian .photo-bottom {
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-[data-era="spd"] .photo-morphed .photo-top {
+[data-era="spd"] .photo-morphed {
     background-color: rgba(0, 0, 0, 0.7);
-}
-
-[data-era="spd"] .photo-morphed .photo-bottom {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Adiciona brilho neon nas bordas das fotos */
