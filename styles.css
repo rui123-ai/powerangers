@@ -16,12 +16,12 @@
 }
 
 body {
-    font-family: 'Spectral', serif;
+    font-family: 'Crete Round', serif;
     background: linear-gradient(to bottom, #0a0a1f 0%, #1a1a3f 100%);
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
 }
 
 /* Efeito de estrelas e céu */
@@ -124,9 +124,9 @@ body {
 }
 
 .logo {
-    font-family: 'Spectral', serif;
+    font-family: 'Crete Round', serif;
     font-size: 3em;
-    font-weight: 700;
+    font-weight: normal;
     color: var(--primary-color);
     text-shadow: var(--neon-glow);
     margin-bottom: 10px;
@@ -134,10 +134,10 @@ body {
 }
 
 .tagline {
-    font-family: 'Spectral', serif;
-    font-weight: 500;
+    font-family: 'Crete Round', serif;
+    font-weight: normal;
     color: var(--secondary-color);
-    font-style: normal;
+    font-style: italic;
     letter-spacing: 0.5px;
     font-size: 1.2em;
 }
@@ -151,8 +151,8 @@ body {
 }
 
 .main-nav a {
-    font-family: 'Spectral', serif;
-    font-weight: 500;
+    font-family: 'Crete Round', serif;
+    font-weight: normal;
     color: var(--text-color);
     text-decoration: none;
     font-size: 1.1em;
@@ -438,8 +438,8 @@ footer {
 }
 
 .card-header h4 {
-    font-family: 'Spectral', serif;
-    font-weight: 600;
+    font-family: 'Crete Round', serif;
+    font-weight: normal;
     font-size: 1.3em;
     margin: 8px 0;
     color: var(--text-color);
@@ -463,19 +463,20 @@ footer {
 }
 
 .card-content strong {
-    font-weight: 600;
+    font-weight: normal;
+    font-style: italic;
     color: var(--primary-color);
 }
 
 .ranger-color {
-    font-family: 'Spectral', serif;
-    font-weight: 500;
+    font-family: 'Crete Round', serif;
+    font-weight: normal;
     font-size: 1.1em;
     letter-spacing: 0.5px;
 }
 
 h2, h3 {
-    font-family: 'Spectral', serif;
-    font-weight: 700;
+    font-family: 'Crete Round', serif;
+    font-weight: normal;
     letter-spacing: 1px;
 } 
