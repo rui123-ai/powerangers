@@ -8,8 +8,14 @@ const rangersData = {
             ability: "Liderança e Estratégia",
             zord: "SPD Runner 1",
             curiosity: "Graduado com honras na Academia SPD",
-            civilian_photo: "path/to/daniel-civilian.jpg",
-            morphed_photo: "path/to/daniel-morphed.jpg"
+            civilian_photos: {
+                top: "path/to/daniel-civilian-1.jpg",
+                bottom: "path/to/daniel-civilian-2.jpg"
+            },
+            morphed_photos: {
+                top: "path/to/daniel-morphed-1.jpg",
+                bottom: "path/to/daniel-morphed-2.jpg"
+            }
         },
         {
             name: "Klaus Drakkonov",
@@ -18,8 +24,14 @@ const rangersData = {
             ability: "Análise Tática e Combate",
             zord: "SPD Runner 2",
             curiosity: "Especialista em tecnologia alienígena",
-            civilian_photo: "path/to/klaus-civilian.jpg",
-            morphed_photo: "path/to/klaus-morphed.jpg"
+            civilian_photos: {
+                top: "path/to/klaus-civilian-1.jpg",
+                bottom: "path/to/klaus-civilian-2.jpg"
+            },
+            morphed_photos: {
+                top: "path/to/klaus-morphed-1.jpg",
+                bottom: "path/to/klaus-morphed-2.jpg"
+            }
         },
         {
             name: "Amemiya Taiyou",
@@ -28,8 +40,14 @@ const rangersData = {
             ability: "Agilidade e Artes Marciais",
             zord: "SPD Runner 3",
             curiosity: "Campeão de artes marciais intergalácticas",
-            civilian_photo: "path/to/amemiya-civilian.jpg",
-            morphed_photo: "path/to/amemiya-morphed.jpg"
+            civilian_photos: {
+                top: "path/to/amemiya-civilian-1.jpg",
+                bottom: "path/to/amemiya-civilian-2.jpg"
+            },
+            morphed_photos: {
+                top: "path/to/amemiya-morphed-1.jpg",
+                bottom: "path/to/amemiya-morphed-2.jpg"
+            }
         },
         {
             name: "Jackie Harllow",
@@ -38,8 +56,14 @@ const rangersData = {
             ability: "Investigação e Rastreamento",
             zord: "SPD Runner 4",
             curiosity: "Ex-detetive da polícia espacial",
-            civilian_photo: "path/to/jackie-civilian.jpg",
-            morphed_photo: "path/to/jackie-morphed.jpg"
+            civilian_photos: {
+                top: "path/to/jackie-civilian-1.jpg",
+                bottom: "path/to/jackie-civilian-2.jpg"
+            },
+            morphed_photos: {
+                top: "path/to/jackie-morphed-1.jpg",
+                bottom: "path/to/jackie-morphed-2.jpg"
+            }
         },
         {
             name: "Ahri-Anya Lang",
@@ -48,8 +72,14 @@ const rangersData = {
             ability: "Tecnologia e Hacking",
             zord: "SPD Runner 5",
             curiosity: "Prodígio em programação quântica",
-            civilian_photo: "path/to/ahri-civilian.jpg",
-            morphed_photo: "path/to/ahri-morphed.jpg"
+            civilian_photos: {
+                top: "path/to/ahri-civilian-1.jpg",
+                bottom: "path/to/ahri-civilian-2.jpg"
+            },
+            morphed_photos: {
+                top: "path/to/ahri-morphed-1.jpg",
+                bottom: "path/to/ahri-morphed-2.jpg"
+            }
         },
         {
             name: "Anaya Hazel Adebayo",
@@ -58,8 +88,14 @@ const rangersData = {
             ability: "Comando e Operações Especiais",
             zord: "SPD Gold Runner",
             curiosity: "Líder da divisão de operações especiais",
-            civilian_photo: "path/to/anaya-civilian.jpg",
-            morphed_photo: "path/to/anaya-morphed.jpg"
+            civilian_photos: {
+                top: "path/to/anaya-civilian-1.jpg",
+                bottom: "path/to/anaya-civilian-2.jpg"
+            },
+            morphed_photos: {
+                top: "path/to/anaya-morphed-1.jpg",
+                bottom: "path/to/anaya-morphed-2.jpg"
+            }
         }
     ]
 };
@@ -70,9 +106,15 @@ function createRangerCard(ranger) {
         <div class="ranger-card">
             <div class="card-header">
                 <div class="ranger-photo">
-                    <div class="photo-split">
-                        <div class="photo-civilian" style="background-image: url('${ranger.civilian_photo}')"></div>
-                        <div class="photo-morphed" style="background-image: url('${ranger.morphed_photo}')"></div>
+                    <div class="photo-container">
+                        <div class="photo-civilian">
+                            <div class="photo-top" style="background-image: url('${ranger.civilian_photos.top}')"></div>
+                            <div class="photo-bottom" style="background-image: url('${ranger.civilian_photos.bottom}')"></div>
+                        </div>
+                        <div class="photo-morphed">
+                            <div class="photo-top" style="background-image: url('${ranger.morphed_photos.top}')"></div>
+                            <div class="photo-bottom" style="background-image: url('${ranger.morphed_photos.bottom}')"></div>
+                        </div>
                     </div>
                 </div>
                 <h4>${ranger.name}</h4>
