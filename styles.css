@@ -213,19 +213,39 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
-/* Ajuste do clipping path para uma diagonal mais pronunciada */
+/* Ajuste para divisão igual */
 .photo-civilian {
-    clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
-    width: 65%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 50%;
+    transform-origin: right center;
 }
 
 .photo-morphed {
-    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
-    width: 65%;
-    margin-left: -25%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    width: 50%;
+    transform-origin: left center;
+}
+
+/* Animação de separação no hover */
+@keyframes separateLeft {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-10px); }
+}
+
+@keyframes separateRight {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(10px); }
+}
+
+.ranger-card:hover .photo-civilian {
+    animation: separateLeft 0.5s ease forwards;
+}
+
+.ranger-card:hover .photo-morphed {
+    animation: separateRight 0.5s ease forwards;
 }
 
 /* Linha diagonal com brilho neon animado */
@@ -239,11 +259,11 @@ body {
     content: '';
     position: absolute;
     top: -5%;
-    left: 40%;
+    left: 50%;
     width: 2px;
     height: 110%;
     background: var(--primary-color);
-    transform: rotate(15deg);
+    transform: translateX(-50%);
     box-shadow: 
         0 0 5px var(--primary-color),
         0 0 10px var(--primary-color),
@@ -253,10 +273,10 @@ body {
     animation: neonPulse 2s ease-in-out infinite;
 }
 
-/* Melhoria do efeito hover */
+/* Remove a escala no hover já que temos a animação de separação */
 .ranger-card:hover .photo-civilian,
 .ranger-card:hover .photo-morphed {
-    transform: scale(1.05);
+    transform: none;
 }
 
 /* Placeholder para imagens dos Rangers */
