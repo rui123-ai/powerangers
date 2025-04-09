@@ -16,12 +16,12 @@
 }
 
 body {
-    font-family: 'Bangers', cursive;
+    font-family: 'Spectral', serif;
     background: linear-gradient(to bottom, #0a0a1f 0%, #1a1a3f 100%);
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 /* Efeito de estrelas e céu */
@@ -124,19 +124,21 @@ body {
 }
 
 .logo {
-    font-family: 'Bangers', cursive;
+    font-family: 'Spectral', serif;
     font-size: 3em;
+    font-weight: 700;
     color: var(--primary-color);
     text-shadow: var(--neon-glow);
     margin-bottom: 10px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .tagline {
-    font-family: 'Bangers', cursive;
+    font-family: 'Spectral', serif;
+    font-weight: 500;
     color: var(--secondary-color);
     font-style: normal;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
     font-size: 1.2em;
 }
 
@@ -149,13 +151,14 @@ body {
 }
 
 .main-nav a {
-    font-family: 'Bangers', cursive;
+    font-family: 'Spectral', serif;
+    font-weight: 500;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: color 0.3s ease;
     position: relative;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
 }
 
 .main-nav a:hover {
@@ -435,11 +438,12 @@ footer {
 }
 
 .card-header h4 {
-    font-family: 'Bangers', cursive;
-    font-size: 1.4em;
+    font-family: 'Spectral', serif;
+    font-weight: 600;
+    font-size: 1.3em;
     margin: 8px 0;
     color: var(--text-color);
-    letter-spacing: 1.5px;
+    letter-spacing: 0.5px;
 }
 
 .card-content {
@@ -455,20 +459,23 @@ footer {
     margin: 6px 0;
     font-size: 1em;
     color: var(--text-color);
-    letter-spacing: 1px;
+    letter-spacing: 0.3px;
 }
 
 .card-content strong {
+    font-weight: 600;
     color: var(--primary-color);
 }
 
 .ranger-color {
-    font-family: 'Bangers', cursive;
+    font-family: 'Spectral', serif;
+    font-weight: 500;
     font-size: 1.1em;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.5px;
 }
 
 h2, h3 {
-    font-family: 'Bangers', cursive;
-    letter-spacing: 2px;
+    font-family: 'Spectral', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
 } 
