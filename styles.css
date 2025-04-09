@@ -16,11 +16,12 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Bangers', cursive;
     background: linear-gradient(to bottom, #0a0a1f 0%, #1a1a3f 100%);
     color: var(--text-color);
     line-height: 1.6;
     overflow-x: hidden;
+    letter-spacing: 1px;
 }
 
 /* Efeito de estrelas e céu */
@@ -123,15 +124,20 @@ body {
 }
 
 .logo {
-    font-size: 2.5em;
+    font-family: 'Bangers', cursive;
+    font-size: 3em;
     color: var(--primary-color);
     text-shadow: var(--neon-glow);
     margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
 .tagline {
+    font-family: 'Bangers', cursive;
     color: var(--secondary-color);
-    font-style: italic;
+    font-style: normal;
+    letter-spacing: 1.5px;
+    font-size: 1.2em;
 }
 
 /* Navegação */
@@ -143,11 +149,13 @@ body {
 }
 
 .main-nav a {
+    font-family: 'Bangers', cursive;
     color: var(--text-color);
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2em;
     transition: color 0.3s ease;
     position: relative;
+    letter-spacing: 1.5px;
 }
 
 .main-nav a:hover {
@@ -427,9 +435,11 @@ footer {
 }
 
 .card-header h4 {
-    font-size: 1.2em;
+    font-family: 'Bangers', cursive;
+    font-size: 1.4em;
     margin: 8px 0;
     color: var(--text-color);
+    letter-spacing: 1.5px;
 }
 
 .card-content {
@@ -443,10 +453,22 @@ footer {
 
 .card-content li {
     margin: 6px 0;
-    font-size: 0.95em;
+    font-size: 1em;
     color: var(--text-color);
+    letter-spacing: 1px;
 }
 
 .card-content strong {
     color: var(--primary-color);
+}
+
+.ranger-color {
+    font-family: 'Bangers', cursive;
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+}
+
+h2, h3 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 2px;
 } 
