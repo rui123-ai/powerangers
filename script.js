@@ -61,6 +61,48 @@ const rangersData = {
             civilian_photo: "images/rangers/spd/anaya/anaya-civilian-1.jpg",
             morphed_photo: "images/rangers/spd/anaya/anaya-morphed-1.jpg"
         }
+    ],
+    ninjaStorm: [
+        {
+            name: "Ryuki Azashiro",
+            color: "red",
+            age: "19 anos",
+            ability: "Manipulação do Fogo",
+            zord: "Hawk Zord",
+            curiosity: "Descendente de uma antiga linhagem de ninjas japoneses",
+            civilian_photo: "images/rangers/ninja-storm/ryuki/ryuki-civilian-1.jpg",
+            morphed_photo: "images/rangers/ninja-storm/ryuki/ryuki-morphed-1.jpg"
+        },
+        {
+            name: "Rosa Guaita",
+            color: "blue",
+            age: "20 anos",
+            ability: "Controle da Água",
+            zord: "Dolphin Zord",
+            curiosity: "Campeã de natação e mergulho livre",
+            civilian_photo: "images/rangers/ninja-storm/rosa/rosa-civilian-1.jpg",
+            morphed_photo: "images/rangers/ninja-storm/rosa/rosa-morphed-1.jpg"
+        },
+        {
+            name: "Zul",
+            color: "pink",
+            age: "18 anos",
+            ability: "Telecinese",
+            zord: "Phoenix Zord",
+            curiosity: "Possui origem alienígena misteriosa",
+            civilian_photo: "images/rangers/ninja-storm/zul/zul-civilian-1.jpg",
+            morphed_photo: "images/rangers/ninja-storm/zul/zul-morphed-1.jpg"
+        },
+        {
+            name: "Olga Balmaceda",
+            color: "green",
+            age: "21 anos",
+            ability: "Controle da Terra",
+            zord: "Lion Zord",
+            curiosity: "Especialista em artes marciais e geologia",
+            civilian_photo: "images/rangers/ninja-storm/olga/olga-civilian-1.jpg",
+            morphed_photo: "images/rangers/ninja-storm/olga/olga-morphed-1.jpg"
+        }
     ]
 };
 
