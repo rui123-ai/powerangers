@@ -1,0 +1,290 @@
+/* Variáveis de cores */
+:root {
+    --primary-color: #00a8ff;
+    --secondary-color: #9c88ff;
+    --background-dark: #0a0a1f;
+    --text-color: #ffffff;
+    --card-bg: rgba(16, 16, 35, 0.8);
+    --neon-glow: 0 0 10px rgba(0, 168, 255, 0.5);
+}
+
+/* Reset e estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Efeito de estrelas e céu */
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png') repeat;
+    z-index: -2;
+}
+
+.twinkling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/twinkling.png') repeat;
+    z-index: -1;
+    animation: twinkle 200s linear infinite;
+}
+
+@keyframes twinkle {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+/* Container e seções */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section {
+    padding: 60px 0;
+    position: relative;
+}
+
+/* Header */
+.main-header {
+    background: rgba(10, 10, 31, 0.9);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    text-shadow: var(--neon-glow);
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+/* Navegação */
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Cards de Rangers */
+.ranger-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.ranger-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.ranger-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--neon-glow);
+}
+
+.card-header {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.ranger-color {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.ranger-color.red { background: rgba(255, 0, 0, 0.2); color: #ff4444; }
+.ranger-color.pink { background: rgba(255, 192, 203, 0.2); color: #ff69b4; }
+.ranger-color.blue { background: rgba(0, 0, 255, 0.2); color: #4444ff; }
+.ranger-color.yellow { background: rgba(255, 255, 0, 0.2); color: #ffff44; }
+.ranger-color.black { background: rgba(0, 0, 0, 0.2); color: #ffffff; }
+.ranger-color.green { background: rgba(0, 255, 0, 0.2); color: #44ff44; }
+
+/* Seção Cosmic Nexus */
+.nexus-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature {
+    text-align: center;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 15px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.feature i {
+    font-size: 2em;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Seção Interativa */
+.interactive-features {
+    margin-top: 30px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 25px;
+    font-size: 1em;
+}
+
+.search-box button {
+    padding: 12px 25px;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-box button:hover {
+    background: var(--secondary-color);
+}
+
+.filter-options {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    background: var(--card-bg);
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    color: var(--text-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Footer */
+footer {
+    background: rgba(10, 10, 31, 0.9);
+    padding: 40px 0;
+    margin-top: 60px;
+    border-top: 1px solid rgba(0, 168, 255, 0.2);
+}
+
+.footer-tagline {
+    text-align: center;
+    margin-top: 20px;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .ranger-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .nexus-features {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.section {
+    animation: fadeIn 1s ease-out;
+} 
