@@ -169,7 +169,64 @@ function handleParallax() {
     });
 }
 
-// Event Listeners
+// Audio Player Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const audio = document.getElementById('theme-song');
+    const playPauseButton = document.getElementById('play-pause');
+    const volumeSlider = document.getElementById('volume-slider');
+
+    // Play/Pause functionality
+    playPauseButton.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            playPauseButton.classList.add('playing');
+            playPauseButton.querySelector('i').classList.remove('fa-play');
+            playPauseButton.querySelector('i').classList.add('fa-pause');
+        } else {
+            audio.pause();
+            playPauseButton.classList.remove('playing');
+            playPauseButton.querySelector('i').classList.remove('fa-pause');
+            playPauseButton.querySelector('i').classList.add('fa-play');
+        }
+    });
+
+    // Volume control
+    volumeSlider.addEventListener('input', (e) => {
+        const volume = e.target.value / 100;
+        audio.volume = volume;
+        
+        // Update volume icon based on level
+        const volumeIcon = document.querySelector('.volume-control i');
+        volumeIcon.className = 'fas';
+        
+        if (volume === 0) {
+            volumeIcon.classList.add('fa-volume-mute');
+        } else if (volume < 0.5) {
+            volumeIcon.classList.add('fa-volume-down');
+        } else {
+            volumeIcon.classList.add('fa-volume-up');
+        }
+    });
+
+    // Click on volume icon to mute/unmute
+    const volumeIcon = document.querySelector('.volume-control i');
+    let lastVolume = audio.volume;
+
+    volumeIcon.addEventListener('click', () => {
+        if (audio.volume > 0) {
+            lastVolume = audio.volume;
+            audio.volume = 0;
+            volumeSlider.value = 0;
+            volumeIcon.className = 'fas fa-volume-mute';
+        } else {
+            audio.volume = lastVolume;
+            volumeSlider.value = lastVolume * 100;
+            volumeIcon.className = lastVolume < 0.5 ? 'fas fa-volume-down' : 'fas fa-volume-up';
+        }
+    });
+});
+
+// Remove unused filter functions
 document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll para links de navegação
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -184,30 +241,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
-    // Busca de Rangers
-    const searchInput = document.querySelector('.search-box input');
-    if (searchInput) {
-        searchInput.addEventListener('input', (e) => {
-            filterRangers(e.target.value, 'all');
-        });
-    }
-
-    // Filtros por era
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const era = button.getAttribute('data-era');
-            filterRangers('', era);
-            
-            // Atualiza botão ativo
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-        });
-    });
-
-    // Adiciona o evento de scroll para o efeito parallax
-    window.addEventListener('scroll', handleParallax, { passive: true });
 
     // Animação de entrada para cards
     const observer = new IntersectionObserver((entries) => {
