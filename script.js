@@ -4,20 +4,20 @@ const rangersData = {
         {
             name: "Daniel Delon",
             color: "red",
-            age: 23,
-            ability: "Liderança e Estratégia",
+            age: "27 anos",
+            ability: "Pré e Pós-cognição",
             zord: "SPD Runner 1",
-            curiosity: "Graduado com honras na Academia SPD",
+            curiosity: "Ex-piloto de corrida, aprendeu a confiar na velocidade, no instinto e no limite",
             civilian_photo: "images/rangers/spd/daniel/daniel-civilian-1.jpg",
             morphed_photo: "images/rangers/spd/daniel/daniel-morphed-1.jpg"
         },
         {
             name: "Klaus Drakkonov",
             color: "blue",
-            age: 25,
-            ability: "Análise Tática e Combate",
+            age: "27 anos",
+            ability: "Manipulação Psíquica",
             zord: "SPD Runner 2",
-            curiosity: "Especialista em tecnologia alienígena",
+            curiosity: "Leva o trabalho com extrema seriedade e dedicação inabalável",
             civilian_photo: "images/rangers/spd/klaus/klaus-civilian-1.jpg",
             morphed_photo: "images/rangers/spd/klaus/klaus-morphed-1.jpg"
         },
@@ -34,10 +34,10 @@ const rangersData = {
         {
             name: "Jackie Harllow",
             color: "yellow",
-            age: 24,
-            ability: "Investigação e Rastreamento",
+            age: "26 anos",
+            ability: "Supervelocidade e Teletransporte",
             zord: "SPD Runner 4",
-            curiosity: "Ex-detetive da polícia espacial",
+            curiosity: "Toca guitarra com maestria, sonha em ser a melhor guitarrista do mundo",
             civilian_photo: "images/rangers/spd/jackie/jackie-civilian-1.jpg",
             morphed_photo: "images/rangers/spd/jackie/jackie-morphed-1.jpg"
         },
@@ -54,10 +54,10 @@ const rangersData = {
         {
             name: "Anaya Hazel Adebayo",
             color: "gold",
-            age: 26,
-            ability: "Comando e Operações Especiais",
+            age: "24 anos",
+            ability: "Manipulação do Tempo",
             zord: "SPD Gold Runner",
-            curiosity: "Líder da divisão de operações especiais",
+            curiosity: "Mantém uma padaria como refúgio entre missões",
             civilian_photo: "images/rangers/spd/anaya/anaya-civilian-1.jpg",
             morphed_photo: "images/rangers/spd/anaya/anaya-morphed-1.jpg"
         }
