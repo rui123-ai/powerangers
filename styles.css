@@ -281,30 +281,23 @@ body {
 }
 
 /* Cores específicas para cada Ranger */
-.ranger-color.red { 
-    background: rgba(255, 0, 0, 0.2); 
-    color: #ff4444; 
+.ranger-color {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
-.ranger-color.blue { 
-    background: rgba(0, 0, 255, 0.2); 
-    color: #4444ff; 
-}
-.ranger-color.green { 
-    background: rgba(0, 255, 0, 0.2); 
-    color: #44ff44; 
-}
-.ranger-color.yellow { 
-    background: rgba(255, 255, 0, 0.2); 
-    color: #ffff44; 
-}
-.ranger-color.pink { 
-    background: rgba(255, 192, 203, 0.2); 
-    color: #ff69b4; 
-}
-.ranger-color.gold { 
-    background: rgba(255, 215, 0, 0.2); 
-    color: #ffd700; 
-}
+
+.ranger-color.red { color: #FF4444; text-shadow: 0 0 10px rgba(255, 68, 68, 0.5); }
+.ranger-color.blue { color: #44AAFF; text-shadow: 0 0 10px rgba(68, 170, 255, 0.5); }
+.ranger-color.green { color: #44FF44; text-shadow: 0 0 10px rgba(68, 255, 68, 0.5); }
+.ranger-color.yellow { color: #FFFF44; text-shadow: 0 0 10px rgba(255, 255, 68, 0.5); }
+.ranger-color.pink { color: #FF44FF; text-shadow: 0 0 10px rgba(255, 68, 255, 0.5); }
+.ranger-color.gold { color: #FFD700; text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); }
 
 /* Estilos específicos para SPD Rangers */
 [data-era="spd"] .ranger-card {
@@ -468,15 +461,26 @@ footer {
     color: var(--primary-color);
 }
 
-.ranger-color {
-    font-family: 'Crete Round', serif;
-    font-weight: normal;
-    font-size: 1.1em;
-    letter-spacing: 0.5px;
-}
-
 h2, h3 {
     font-family: 'Crete Round', serif;
     font-weight: normal;
     letter-spacing: 1px;
+}
+
+.ranger-group {
+    margin-bottom: 40px;
+}
+
+.ranger-group h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-left: 20px;
 } 
