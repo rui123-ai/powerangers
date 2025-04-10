@@ -80,8 +80,8 @@ const rangersData = {
             ability: "Controle da Água",
             zord: "Dolphin Zord",
             curiosity: "Campeã de natação e mergulho livre",
-            civilian_photo: "images/rangers/ninja-storm/rosa/rosa-civilian-1.jpg",
-            morphed_photo: "images/rangers/ninja-storm/rosa/rosa-morphed-1.jpg"
+            civilian_photo: "./images/rangers/ninja-storm/rosa/rosa-civilian-1.png",
+            morphed_photo: "./images/rangers/ninja-storm/rosa/rosa-morphed-1.jpg"
         },
         {
             name: "Zul",
