@@ -102,6 +102,16 @@ const rangersData = {
             curiosity: "Especialista em artes marciais e geologia",
             civilian_photo: "images/rangers/ninja-storm/olga/olga-civilian-1.jpg",
             morphed_photo: "images/rangers/ninja-storm/olga/olga-morphed-1.jpg"
+        },
+        {
+            name: "Rafael Soares",
+            color: "yellow",
+            age: "20 anos",
+            ability: "Manipulação do Trovão",
+            zord: "Thunder Zord",
+            curiosity: "Praticante de parkour e especialista em combate acrobático",
+            civilian_photo: "images/rangers/ninja-storm/rafael/rafael-civilian-1.jpg",
+            morphed_photo: "images/rangers/ninja-storm/rafael/rafael-morphed-1.jpg"
         }
     ]
 };
